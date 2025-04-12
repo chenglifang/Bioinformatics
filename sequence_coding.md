@@ -66,6 +66,7 @@ def file2matrix(filename, KMAX, bpTable):
 
     for line in arrayOLines:
         line = line.strip() # 删除空白符，包括行尾回车符
+        # 去除字符串 line 两端的空白符（包括换行符 \n、空格、制表符等），然后再赋值回 line。
         listFromLine = line.split(': ') # 以': '为分隔符进行切片
         nt_seq = list(listFromLine[1]) # 取出核酸序列并转换成list
         del(nt_seq[70:72]) # 删除位于第71，72位的供体位点
